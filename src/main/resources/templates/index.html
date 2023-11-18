@@ -15,19 +15,19 @@
 
 <div class="input-group mb-3">
     <form th:action="@{/new}" method="post" th:object="${itemUp}">
-        <div class="input-group">
+        <div class="input-group mb-3">
             <input type="hidden" name="id" th:field="*{id}">
             <input type="text" class="form-control" th:field="*{descripcion}" name="descripcion" placeholder="Ingrese una tarea" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-info" type="submit">Agregar</button>
+                <button class="btn btn-info" style="margin-left: 1rem" type="submit">Agregar</button>
             </div>
         </div>
     </form>
 </div>
 
-<div class="row">
+<div class="row" style="background-color: cadetblue">
     <div>
-        <div th:if="${items != null and !items.isEmpty()}" style="display: flex; margin: 20px"><!--preguntamos si la lista de tareas contiene algo -->
+        <div th:if="${items != null and !items.isEmpty()}" style="display: flex; margin: 20px"><!--Verifico si la lista de tareas contiene datos -->
             <table class="table" style="text-align: center;">
                 <thead>
                 <tr>
@@ -37,17 +37,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="item : ${items}"><!--recorremos la lista de tareas-->
+                <tr th:each="item : ${items}"><!--Mediante un Foreach recorro la lista de tareas-->
                     <!-- es un for each -->
-                    <td scope="row" th:text="${item.getId()}">mostrar el id</td><!--mostramos el id de la tarea-->
-                    <td scope="row" th:text="${item.getDescripcion()}">mostrar el apellido</td><!--mostramos el apellido de la tarea-->
+                    <td scope="row" th:text="${item.getId()}">mostrar id</td>
+                    <td scope="row" th:text="${item.getDescripcion()}">mostrar descripcion</td>
                     <td scope="row">
 
                         <div class="btn-action">
                            <a th:href="@{/update/__${item.getId}__}" class="btn btn-success">Modificar</a>
 
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" th:data-bs-target="'#exampleModal_' +${item.getId()}">Eliminar</button><!--button que acciona el modal-->
-                            <!--Codigo del Modal "robado" de boostrap-->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" th:data-bs-target="'#exampleModal_' +${item.getId()}">Eliminar</button>
+
                             <div class="modal fade" th:id="'exampleModal_' + ${item.getId()}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -56,12 +56,12 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Seguro que quieres eliminar la siguiente tarea:</p>
-                                            <h4 th:text="${item.getId()}"></h4><!--mostramos el id de la tarea en el modal-->
-                                            <h4 th:text="${item.getDescripcion()}"></h4><!--mostramos la descripcion de la tarea en el modal-->
+                                            <p><strong> Desea eliminar la tarea seleccionada?</strong></p>
+                                            <h4 th:text="${item.getId()}"></h4><!--Muestro id de la tarea en el modal-->
+                                            <h4 th:text="${item.getDescripcion()}"></h4><!--Muestro la tarea en el modal-->
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button><!--button que cierra el modal-->
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                             <a th:href="@{/delete/__${item.getId}__}" class="btn btn-danger">Eliminar</a>
                                         </div>
                                     </div>

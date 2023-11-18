@@ -40,7 +40,6 @@ public class TodoController {
     @GetMapping("/update/{id}")
     public String modificar(@PathVariable int id, Model model ){
         TodoItem item = todoInterface.traer(id);
-        System.out.println(item.getDescripcion());
         model.addAttribute("itemUp",item);
         return "index";
 
