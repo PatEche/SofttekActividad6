@@ -34,7 +34,7 @@ git clone https://github.com/PatEche/SofttekActividad5.git
 <img src="images/Captura.jpg">
 
 ## Modificar Tarea
-<img src="images/Modificar.jpg.jpg">
+<img src="images/Modificar.jpg">
 
 ## Eliminar Tarea
-<img src="images/Eliminar.jpg.jpg">
+<img src="images/Eliminar.jpg">
