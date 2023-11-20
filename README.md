@@ -1,14 +1,15 @@
 ### TODO APP
 
 Desarrollo de una App Web simple utilizando el Framework SpringBoot
-La app consiste en un Todo List el cual nos permite ingresar tareas,listarlas, modificarlas y eliminarlas. 
+La app consiste en un Todo List el cual nos permite ingresar tareas, listar, modificar y eliminar. 
 
 
 Este proyecto esta basado en la plantilla [Admin Lte3]
 (https://github.com/ColorlibHQ/AdminLTE)
 
 ## Instalación
-###1 Paso
+
+### 1 Paso
 **1 forma**. Dar clic en Code y luego en Donwload Zip
 **2 forma.** Crear una carpeta, ingresar a git bash y ejecutar
 
@@ -30,7 +31,7 @@ git clone https://github.com/PatEche/SofttekActividad5.git
 -Pantalla Principal
 
 ## Listar y Agregar
-![Captura.jpg](images%Captura.jpg)
+(![Captura.jpg](images%Captura.jpg))
 
 ## Modificar Tarea
 ![Modificar.jpg](images%Modificar.jpg)
