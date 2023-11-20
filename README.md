@@ -31,7 +31,7 @@ git clone https://github.com/PatEche/SofttekActividad5.git
 -Pantalla Principal
 
 ## Listar y Agregar
-(![Captura.jpg](images%Captura.jpg))
+<img src="images/Captura.jpg">
 
 ## Modificar Tarea
 ![Modificar.jpg](images%Modificar.jpg)
