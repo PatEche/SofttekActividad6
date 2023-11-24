@@ -1,0 +1,24 @@
+services:
+  java_app: #Servicio llamado java_app
+    container_name: docker-app # nombre del contenedor
+    image: docker-app #nombre de la imagen
+    build: . # ubicación del archivo Dockerfile
+    restart: unless-stopped # se reinicia siempre, a no ser que se pause manualmente
+    ports: # Puertos que se exponen
+      - "8080:8080"
+    environment: # se reemplaza la ruta de la base de datos. En vez de "localhost" se dirige al contenedor "docker-app"
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-backend:3306/bd_todo
+    depends_on: # "indica que depende este servicio de otro, en este caso java_bd
+      - java_db
+
+    # Servicio java_db, configuraciones para la base de datos
+  java_db:
+    container_name: docker-backend
+    image: mysql:8.0.33
+    ports:
+      - 3307:3306  # puerto donde se va a levantar
+    environment:
+      MYSQL_DATABASE: bd_todo #nombre de la base de datos
+      MYSQL_ROOT_PASSWORD: "" #password bd
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
