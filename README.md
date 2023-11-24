@@ -10,13 +10,9 @@ Este proyecto esta basado en la plantilla [Admin Lte3]
 ## Instalación
 
 ### 1 Paso
-<<<<<<< HEAD
 
 **1 forma.** Dar clic en Code y luego en Download Zip
-=======
-**1 forma**. Dar clic en Code y luego en Donwload Zip
 
->>>>>>> bfebc8457acf53b2e33cd56ad9660e4843055698
 **2 forma.** Crear una carpeta, ingresar a git bash y ejecutar
 
 git clone https://github.com/PatEche/SofttekActividad5.git
@@ -43,8 +39,4 @@ git clone https://github.com/PatEche/SofttekActividad5.git
 <img src="images/Modificar.jpg">
 
 ## Eliminar Tarea
-<<<<<<< HEAD
 <img src="images/Eliminar.jpg">
-=======
-<img src="images/Eliminar.jpg">
->>>>>>> bfebc8457acf53b2e33cd56ad9660e4843055698
